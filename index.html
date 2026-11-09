@@ -80,7 +80,7 @@
   <div class="lang-zh">
     <span class="badge">隱私權政策</span>
     <h1>CalorieRecycle 隱私權政策</h1>
-    <p class="effective">生效日期：2026 年 10 月 3 日（先前版本：2026 年 4 月 25 日）</p>
+    <p class="effective" id="policy-1-9">生效日期：2026 年 11 月（先前版本：2026 年 10 月 3 日）</p>
 
     <h2>1. 總覽</h2>
     <p>CalorieRecycle（以下簡稱「本 App」）由 Anderson Tsai 開發，並尊重您的隱私。本政策說明本 App 收集哪些資料、如何使用、如何保護，以及您的權利。</p>
@@ -91,18 +91,13 @@
     <p>本 App 會在您授權後，讀取並寫入 Apple 健康 App 中的以下資料類型：</p>
     <div class="highlight-box">
       <ul>
-        <li>活動能量 / Active Energy Burned</li>
-        <li>基礎代謝能量 / Basal Energy Burned</li>
-        <li>步數 / Step Count</li>
-        <li>體重 / Body Weight</li>
-        <li>身高 / Height</li>
-        <li>出生日期（用於計算年齡）</li>
-        <li>性別（用於計算 BMR）</li>
-        <li>飲食熱量及各大營養素（碳水化合物、蛋白質、脂肪等）</li>
-        <li>心率、靜止心率、HRV、血氧、體脂等（可選顯示）</li>
+        <li>活動與能量：活動能量、基礎代謝能量、運動時間、站立時數、步數、爬樓層數、運動紀錄（workouts）</li>
+        <li>身體：體重、身高、體脂率、除脂體重、腰圍、BMI、出生日期（用於計算年齡）、性別（用於計算 BMR）。體脂率、除脂體重、腰圍與身高供「身體組成」頁計算估計的趨勢（見 2-7）</li>
+        <li>飲食：熱量及各大營養素（碳水化合物、蛋白質、脂肪等）</li>
+        <li>生命徵象（可選顯示）：心率、靜止心率、心率變異（HRV）、血氧、血壓、呼吸率、體溫、血糖、最大攝氧量</li>
       </ul>
     </div>
-    <p>本 App 將飲食記錄寫回健康 App，讓其他健康應用可同步使用。您的 HealthKit 原始資料僅儲存於您的裝置本地，不會上傳至任何伺服器。唯一例外：若您主動加入「好友群組」，App 會上傳由這些資料彙總出的數字（見 2-5），而非原始樣本。</p>
+    <p>本 App 寫入健康 App 的資料只有兩類：飲食記錄（熱量、碳水化合物、蛋白質、脂肪、纖維、糖、飽和脂肪、膽固醇、鈉、鉀、鈣、鐵、水分、咖啡因），讓其他健康應用可同步使用；以及您<strong>手動輸入</strong>的體重或腰圍。您的 HealthKit 原始資料僅儲存於您的裝置本地，不會上傳至任何伺服器。唯一例外：若您主動加入「好友群組」，App 會上傳由這些資料彙總出的數字（見 2-5），而非原始樣本。身體組成相關資料不在此例外之內（見 2-7）。</p>
 
     <h3>2-2 相機</h3>
     <p>當您使用條碼掃描功能時，本 App 會請求相機權限以擷取食品條碼圖像，並即時解析後丟棄，不留存任何影像或視訊。</p>
@@ -113,7 +108,9 @@
       <ul>
         <li>飲食日記（食物名稱、份量、熱量、時間）</li>
         <li>個人設定（語言、體重單位、熱量目標、活動量）</li>
-        <li>健康快取（加速啟動用，定期從 HealthKit 更新）</li>
+        <li>健康快取（加速啟動用，定期從 HealthKit 更新），包含「身體組成」頁用的體重、體脂率、除脂體重、腰圍與身高快取</li>
+        <li>您手動記錄的身體圍度（腰圍、臀圍、頸圍）</li>
+        <li>您主動匯出的 CSV 檔：只有在您按下匯出後，才會由系統分享面板交給您選擇的地方；本 App 不會自行傳送</li>
       </ul>
     </div>
 
@@ -136,10 +133,14 @@
         <li>（依您選擇的分享等級）蛋白質／碳水／脂肪克數與每週摘要文字</li>
       </ul>
     </div>
-    <p>我們<strong>不會</strong>上傳逐筆飲食記錄、食物名稱、體重，也不會上傳心率、HRV、血氧、最大攝氧量或個別運動紀錄等 HealthKit 原始樣本。您可隨時在 App 內退出群組，您在該群組的紀錄會一併刪除。這些資料存放於 Apple CloudKit，由 Apple 依其隱私政策處理；開發者不自建伺服器。</p>
+    <p>我們<strong>不會</strong>上傳逐筆飲食記錄、食物名稱、體重、身體組成（體脂率、除脂體重、腰圍與手動圍度紀錄），也不會上傳心率、HRV、血氧、最大攝氧量或個別運動紀錄等 HealthKit 原始樣本。您可隨時在 App 內退出群組，您在該群組的紀錄會一併刪除。這些資料存放於 Apple CloudKit，由 Apple 依其隱私政策處理；開發者不自建伺服器。</p>
 
     <h3>2-6 社群食物資料庫（選用功能）</h3>
     <p>若您選擇把自訂食物分享給社群，該食物的名稱、品牌、營養成分、條碼與您的 iCloud 使用者識別碼（用來去除重複與管理檢舉）會寫入 CloudKit 公開資料庫，其他使用者可以搜尋到。其中營養成分也可能被貢獻回 Open Food Facts（以匿名帳號送出，不含您的個人資料）。未分享的自訂食物只存在您的裝置上。</p>
+
+    <h3>2-7 身體組成與居家動作指引</h3>
+    <p>「身體組成」頁用您在健康 App 的體重、體脂率、除脂體重、腰圍與身高，以及您手動記錄的圍度，在<strong>您的裝置上</strong>計算平滑的體重趨勢、脂肪量與除脂體重的估計、腰高比。這些都是估計值與趨勢，不是醫療診斷。這些資料只在您的裝置上處理：不會上傳、不會存入 iCloud／CloudKit，也不會出現在好友群組的任何內容中。</p>
+    <p>「居家動作指引」是內建的動作說明，不記錄、不儲存、不傳送您的任何資料，也不讀取健康資料。</p>
 
     <h2>3. 我們不收集的資料</h2>
     <div class="no-collect">
@@ -148,6 +149,7 @@
         <li>本 App 不要求建立帳號；僅在使用好友群組時，會讀取您的 Game Center 暱稱與 iCloud 識別碼</li>
         <li>本 App 不使用廣告追蹤或第三方分析 SDK</li>
         <li>本 App 沒有開發者自建的伺服器，不會將您的健康原始資料傳送給開發者</li>
+        <li>身體組成與手動圍度資料只在您的裝置上處理，開發者不會收到</li>
       </ul>
     </div>
 
@@ -158,6 +160,7 @@
       <li>計算您的基礎代謝率（BMR）與每日總能量消耗（TDEE）</li>
       <li>計算飲食熱量剩餘預算與赤字進度</li>
       <li>將飲食記錄同步回 Apple 健康 App</li>
+      <li>在「身體組成」頁顯示體重趨勢、脂肪量與除脂體重的估計與腰高比</li>
     </ul>
 
     <h2>5. HealthKit 特別聲明</h2>
@@ -191,7 +194,7 @@
   <div class="lang-en">
     <span class="badge">Privacy Policy</span>
     <h1>CalorieRecycle Privacy Policy</h1>
-    <p class="effective">Effective Date: October 3, 2026 (previous version: April 25, 2026)</p>
+    <p class="effective">Effective Date: November 2026 (previous version: October 3, 2026)</p>
 
     <h2>1. Overview</h2>
     <p>CalorieRecycle (the "App") is developed by Anderson Tsai. We respect your privacy. This policy describes what data the App collects, how it is used, how it is protected, and your rights.</p>
@@ -202,18 +205,13 @@
     <p>With your permission, the App reads and writes the following data types in Apple Health:</p>
     <div class="highlight-box">
       <ul>
-        <li>Active Energy Burned</li>
-        <li>Basal Energy Burned</li>
-        <li>Step Count</li>
-        <li>Body Weight</li>
-        <li>Height</li>
-        <li>Date of Birth (for age calculation)</li>
-        <li>Biological Sex (for BMR calculation)</li>
-        <li>Dietary Energy &amp; Macronutrients (carbs, protein, fat, etc.)</li>
-        <li>Heart Rate, Resting HR, HRV, Blood Oxygen, Body Fat, etc. (optional display)</li>
+        <li>Activity &amp; energy: Active Energy Burned, Basal Energy Burned, Exercise Time, Stand Hours, Step Count, Flights Climbed, Workouts</li>
+        <li>Body: Body Weight, Height, Body Fat Percentage, Lean Body Mass, Waist Circumference, BMI, Date of Birth (for age calculation), Biological Sex (for BMR calculation). Body fat, lean mass, waist and height feed the Body Composition page's estimated trends (see 2-7)</li>
+        <li>Nutrition: Dietary Energy &amp; Macronutrients (carbs, protein, fat, etc.)</li>
+        <li>Vitals (optional display): Heart Rate, Resting Heart Rate, Heart Rate Variability (HRV), Blood Oxygen, Blood Pressure, Respiratory Rate, Body Temperature, Blood Glucose, VO2 Max</li>
       </ul>
     </div>
-    <p>The App writes food log entries back to Apple Health so other apps can sync. Your raw HealthKit data is stored locally on your device and is never uploaded to any server. The only exception: if you choose to join a Friend Group, the App uploads numbers summarized from that data (see 2-5), never the raw samples.</p>
+    <p>The App writes only two kinds of data to Apple Health: food log entries (energy, carbohydrates, protein, fat, fiber, sugar, saturated fat, cholesterol, sodium, potassium, calcium, iron, water, caffeine) so other apps can sync, and a body weight or waist measurement when you enter one <strong>manually</strong>. Your raw HealthKit data is stored locally on your device and is never uploaded to any server. The only exception: if you choose to join a Friend Group, the App uploads numbers summarized from that data (see 2-5), never the raw samples. Body-composition data is not part of that exception (see 2-7).</p>
 
     <h3>2-2 Camera</h3>
     <p>When you use the barcode scanner, the App requests camera access to capture barcodes. Images are decoded in real time and immediately discarded — no photos or videos are stored.</p>
@@ -224,7 +222,9 @@
       <ul>
         <li>Food diary (food name, serving size, calories, timestamp)</li>
         <li>User preferences (language, weight unit, calorie goal, activity level)</li>
-        <li>Health cache (for fast startup; periodically refreshed from HealthKit)</li>
+        <li>Health cache (for fast startup; periodically refreshed from HealthKit), including the weight, body fat, lean mass, waist and height cache used by the Body Composition page</li>
+        <li>Body measurements you log by hand (waist, hip, neck)</li>
+        <li>CSV files you export: handed to the system share sheet only when you tap export; the App never sends them anywhere by itself</li>
       </ul>
     </div>
 
@@ -247,10 +247,14 @@
         <li>(Depending on the sharing level you choose) grams of protein / carbs / fat and a weekly summary text</li>
       </ul>
     </div>
-    <p>We <strong>do not</strong> upload itemized food logs, food names, or body weight, nor HealthKit raw samples such as heart rate, HRV, blood oxygen, VO2 max, or individual workouts. You can leave a group at any time inside the App, which deletes your records for that group. This data is stored in Apple CloudKit and handled under Apple's privacy policy; the developer runs no servers of their own.</p>
+    <p>We <strong>do not</strong> upload itemized food logs, food names, body weight, or body composition (body fat, lean mass, waist or manual measurements), nor HealthKit raw samples such as heart rate, HRV, blood oxygen, VO2 max, or individual workouts. You can leave a group at any time inside the App, which deletes your records for that group. This data is stored in Apple CloudKit and handled under Apple's privacy policy; the developer runs no servers of their own.</p>
 
     <h3>2-6 Community Food Database (optional)</h3>
     <p>If you choose to share a custom food with the community, its name, brand, nutrition values, barcode, and your iCloud user identifier (used to remove duplicates and manage reports) are written to the CloudKit public database where other users can find it. The nutrition values may also be contributed to Open Food Facts using an anonymous account, with no personal data about you. Custom foods you do not share stay on your device only.</p>
+
+    <h3>2-7 Body Composition and Home Workout Guide</h3>
+    <p>The Body Composition page uses your weight, body fat percentage, lean body mass, waist circumference and height from Apple Health, plus any measurements you log by hand, to calculate &mdash; <strong>on your device</strong> &mdash; a smoothed weight trend, an estimate of fat mass vs. lean mass, and your waist-to-height ratio. These are estimates and trends, not a medical diagnosis. This data is processed on your device only: it is not uploaded, not stored in iCloud/CloudKit, and never appears in anything shared with a Friend Group.</p>
+    <p>The Home Workout Guide is built-in instructional content. It does not record, store or send any of your data, and does not read Health data.</p>
 
     <h2>3. What We Do NOT Collect</h2>
     <div class="no-collect">
@@ -259,6 +263,7 @@
         <li>The App does not ask you to create an account; only when you use Friend Groups does it read your Game Center nickname and iCloud identifier</li>
         <li>The App does not use ad-tracking or third-party analytics SDKs</li>
         <li>The developer runs no servers of their own and does not receive your raw health data</li>
+        <li>Body-composition and manual-measurement data is processed on your device only and is never received by the developer</li>
       </ul>
     </div>
 
@@ -269,6 +274,7 @@
       <li>Calculating your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE)</li>
       <li>Computing remaining calorie budget and deficit progress</li>
       <li>Writing food logs back to Apple Health</li>
+      <li>Showing weight trends, fat/lean mass estimates and waist-to-height ratio on the Body Composition page</li>
     </ul>
 
     <h2>5. HealthKit Disclosure</h2>
